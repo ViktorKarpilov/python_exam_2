@@ -7,11 +7,13 @@ from task1 import *
 
 
 #product_list - словник з dataset, що зберігає товар та список його покупок (цін)
-def recursionByProducts(user_email, product_list, amount_of_money = 0):
+def recursionByPoints(user_email, product_list, amount_of_money = 0):
+    pass
     #TODO
 
 
 def recursionByUsers(user_emails = list(dataset.keys()), result_dict = dict()):
+    pass
     #TODO
 
 

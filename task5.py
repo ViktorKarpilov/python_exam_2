@@ -6,11 +6,21 @@ import plotly.graph_objs as go
 
 
 #Вивести кругову діаграму: якого товару на яку суму продано.
+data= dict()
+for name_auto in list (dataset.keys()):
 
-data = ?
+    for race, race_list in (dataset[name_auto]).items():
 
-diagram = ?
+        if race in data:
 
-fig = ?
+            data[race] += sum(race_list)
 
-plotly.offline.plot(?)
+        else:
+
+            data[race] = sum(race_list)
+print(data)
+
+
+diagram =go.Pie((labels=list(data.keys()), values=list( data.values())))
+
+plotly.offline.plot([diagram], filename = "auto.html")
