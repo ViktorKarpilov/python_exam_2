@@ -1,26 +1,21 @@
 from data import dataset
+from task3 import recursionBySeconds
 from task1 import *
 
 import plotly
 import plotly.graph_objs as go
 
 
-#Вивести кругову діаграму: якого товару на яку суму продано.
-data= dict()
-for name_auto in list (dataset.keys()):
+#Вивести кругову діаграму: на якій трасі скільки заїздів
+def get_set(raw_set):
+    raw_set = dict(raw_set)
+    for i,j in raw_set.items():
+        raw_set[i] = len(j)
+    return raw_set
 
-    for race, race_list in (dataset[name_auto]).items():
-
-        if race in data:
-
-            data[race] += sum(race_list)
-
-        else:
-
-            data[race] = sum(race_list)
-print(data)
+data = get_set(recursionBySeconds(dataset))
 
 
-diagram =go.Pie((labels=list(data.keys()), values=list( data.values())))
+diagram =go.Pie(labels=list(data.keys()), values=list( data.values()))
 
 plotly.offline.plot([diagram], filename = "auto.html")

@@ -48,7 +48,7 @@ def getCompetition():
 def getResults():
     user_input = input("Enter results : ")
 
-    if (re.match(r"\[[0-9]{2}\,[0-9]{2}\]", user_input)):
+    if (re.match(r"\[[0-9]{2}\.[0-9]{2}\]", user_input)):
         return user_input
     else:
         return False

@@ -19,8 +19,14 @@
 
 dataset = \
 {
-        "AA-4444":{
-                "Madrino":[44.12]
+        "AAAA-4444":{
+                "madrino":'[44.12]',
+                "de castro":'[14.12]'
+                },
+        "ABCA-4444":{
+                "madrino":'[54.12]',
+                "de castro":'[12.66]',
+                "de liman":'[00.45]'
                 }
 }
 

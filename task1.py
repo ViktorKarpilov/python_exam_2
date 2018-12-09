@@ -4,7 +4,7 @@ def addAuto(car, race, points):
 
     if car in dataset:
         if race in dataset[car]:
-            dataset[car][race].append(points)
+            dataset[car][race] += " "+points
         else:
             dataset[car][race]=[points]
     else:
